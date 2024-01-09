@@ -1,12 +1,21 @@
+/*
+* main styling: borderbox sizing for the elements
+*/
 * {
     margin: 0;
     padding: 0;
     font-family: Calibri;
     box-sizing: border-box;
 }
+/*
+* main styling: background color
+*/
 body{
     background: #000;
 }
+/*
+* main styling: centered elements
+*/
 #main-container{
     width: 100%;
     height: 100vh;
@@ -14,12 +23,18 @@ body{
     align-items: center;
     justify-content: center;
 }
+/*
+* main styling: perspective look to the container
+*/
 #card-container{
     width: 350px;
     height: 190px;
     perspective: 1000px;
     border-radius: 10px;
 }
+/*
+* main styling: transformation style set to 3d with perspective and transitions enabled 
+*/
 #card{
     width: 100%;
     height: 100%;
@@ -31,6 +46,9 @@ body{
     font-family: Calibri;
     transform-style: preserve-3d;
 }
+/*
+* main styling: the linear gradient for color contrast is implemented
+*/
 #front,
 #back{
     width: 100%;
@@ -41,9 +59,15 @@ body{
     backface-visibility: hidden;
     background: linear-gradient(55deg, #0b0b0bfc 45%, rgb(25 25 25) 40%)
 }
+/*
+* main styling: rotating back and forth enabled using transform 
+*/
 #back{
     transform: rotateY(180deg);
 }
+/*
+* main styling: general styling
+*/
 #front::after,
 #front::before,
 #back::after,
@@ -53,6 +77,9 @@ body{
     height: 350px;
     position: absolute;
 }
+/*
+* main styling: traformation rotation and background are implemented
+*/
 #front::before,
 #back::before{
     left: -1%;
@@ -60,6 +87,9 @@ body{
     border-radius: 50% 95% 0% 100%;
     background: rgb(255 255 255 / 3%);
 }
+/*
+* main styling: sturcture is implemented for the element
+*/
 #front::after,
 #back::after{
     height: 100%;
@@ -68,6 +98,9 @@ body{
     border-radius: 100% 0 100% 80%;
     border: 1px solid rgb(239, 239, 239);
 }
+/*
+* main styling: The element is changed to transparent with a gradient implemented for contrast
+*/
 .type{
     position: relative;
     top: 10%;
@@ -78,23 +111,38 @@ body{
     -webkit-background-clip: text;
     color: transparent;
 }
+/*
+* main styling: general structure implemented
+*/
 .title-text{
     position: absolute;
     right: 5%;
     top: 5%;
 }
+/*
+* main styling: general structure implemented
+*/
 .details{
     position: relative;
     top: 35%;
     margin-left: 15px;
     font-size: 12px;
 }
+/*
+* main styling: simple margiin implemented
+*/
 #hidden-number{
     margin-bottom: 10px;
 }
+/*
+* main styling: simple margin implemented
+*/
 #valid-date{
     margin-left: 15px;
 }
+/*
+* main styling: structure and styling of the buttons are implemented
+*/
 #show-btn,
 #hide-btn{
     position: absolute;
@@ -108,6 +156,9 @@ body{
     font-family: Calibri;
     background: rgb(28, 28, 107);
 }
+/*
+* main styling: structure and positioning of the element is implemented
+*/
 .logo{
     position: absolute;
     font-size: 10px;
@@ -120,6 +171,9 @@ body{
     bottom: 3%;
     right: 0%;
 }
+/*
+* main styling: aspect ratio along with positioning is implemented
+*/
 .logo::before,
 .logo::after {
     content: '';
@@ -128,18 +182,30 @@ body{
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
+/*
+* main styling: general styling is implemented
+*/
 .logo::before{
     background: rgba(255, 0, 0, 0.525);
     left: 10%;
 }
+/*
+* main styling: general styling is implemented
+*/
 .logo::after{
     background: rgba(255, 213, 0, 0.584);
     right: 10%;
 }
+/*
+* main styling: roation is implemented
+*/
 .flipped{
     transform: rotateY(-180deg);
 }
-#chip{
+/*
+* main styling: styling, positioning and structure is implemented
+*/
+#chip{ 
     top: 10%;
     position: absolute;
     background: #e0ab89;
@@ -151,46 +217,70 @@ body{
     justify-content: center;
     align-items: center;
 }
+/*
+* main styling: part of the chip's styling is implemented
+*/
 #chip span{
     position: absolute;
     background: #e0ab89;
     border: 1px solid black;
 }
+/*
+* main styling: part of the chip's structure implemented
+*/
 #chip span:nth-child(1){
     height: 100%;
     width: 40%;
     border-top: none;
     border-bottom: none;
 }
-#chip span:nth-child(2){
+/*
+* main styling: part of the chip's structure implemented
+*/
+#chip span:nth-child(2){ 
     height: 60%;
     width: 40%;
     border-left: none;
     border-radius: 0 5px 5px 0;
 }
-#chip span:nth-child(3){
+/*
+* main styling: part of the chip's structure implemented
+*/
+#chip span:nth-child(3){ 
     height: 60%;
     width: 40%;
     border-right: none;
     border-radius: 5px 0 0 5px;
     right: 0;
 }
+/*
+* main styling: part of the chip's structure implemented
+*/
 #chip span:nth-child(4){
     width: 100%;
     border: none;
     border-bottom: 1px solid black;
 }
+/*
+* main styling: part of the chip's aspect ratio and structure implemented
+*/
 #chip span:nth-child(5){
     aspect-ratio: 1/1;
     width: 40%;
     border-radius: 2px;
 }
+/*
+* main styling: structure of the reflection implemented
+*/
 .reflection{
     width: 100%;
     height: 100%;
     position: absolute;
     transition: 1s;
 }
+/*
+* main styling: rotation effect along with its styling implemented
+*/
 .reflection::before{
     z-index: 0;
     top: 50%;
@@ -202,6 +292,9 @@ body{
     transform: translate(-50%, -50%)rotate(50deg);
     box-shadow: 0px 0px 10px 10px #ffffff;
 }
+/*
+* main styling: general styling is implemented
+*/
 .move{
     transform: translate(700px);
 }
